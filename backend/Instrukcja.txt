@@ -1,0 +1,7 @@
+1.Utworzyć baze danych i zaimportować plik rss.sql
+2.W pliku config.php ustawić parametry do połączenia z bazą danych
+3.Skopiować katalog backend na serwer
+4.Uruchomić plik form.php5
+5.Wybrać kanał rss z którego chcemy pobrać artykuły i nacisnąć send
+6.Artykuły zostaną zapisane do tabeli articles_rmf24 lub articles_ks
+7.W katalogu logs zostaną utworzone logi
