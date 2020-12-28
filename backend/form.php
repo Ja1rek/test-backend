@@ -29,7 +29,7 @@ include('vendor/dg/simplehtmldom//simple_html_dom.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-	switch ($_POST['rss']) 
+	switch (intval($_POST['rss'])) 
 	{
 		
 		case 1:
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		$limit=0;
 		foreach ($rss->item as $item) 
 		{		
-			$query1='SELECT guid from articles_rmf24 where guid="'.$item->guid.'"'; 
+			$query1='SELECT guid from articles_rmf24 where guid="'.intval($item->guid).'"'; 
 			$rez=mysqli_query($mMysqli,$query1);
 			$k=mysqli_fetch_array($rez,MYSQLI_ASSOC);
 			
