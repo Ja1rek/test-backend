@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			{
 			   if($limit<5)
 				{
-					$sql.='("'.date("Y/m/d H:i:s", strtotime($item->pubDate)).'","'.date("Y-m-d H:i:s").'","'.mysql_real_escape_string(strip_tags($item->title)).'","'.mysql_real_escape_string(strip_tags($item->description)).'","'.$item->guid.'" ) ,';
+					$sql.='("'.date("Y/m/d H:i:s", strtotime($item->pubDate)).'","'.date("Y-m-d H:i:s").'","'.mysql_real_escape_string(strip_tags($item->title)).'","'.mysql_real_escape_string(strip_tags($item->description)).'","'.intval($item->guid).'" ) ,';
 					
 					$limit++;
 				}
